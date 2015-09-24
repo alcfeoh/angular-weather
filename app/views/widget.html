@@ -1,0 +1,19 @@
+<div class="row marketing well">
+
+  <div class="col-md-6">
+    <h3>{{loc.name}} ({{loc.zip}})</h3>
+    <p>
+    <h4>{{loc.weather.main}}</h4> {{loc.weather.description}}
+    </p>
+    <p>
+    <h4>Temperatures today</h4>
+    Current {{loc.temp.temp}} - Max {{loc.temp.temp_max}} - Min {{loc.temp.temp_min}}
+    </p>
+  </div>
+
+  <div class="col-md-6">
+    <a class="close" ng-click="onDelete(loc.zip)">&times;</a>
+    <img ng-src="{{getWeatherIcon(loc.weather)}}" />
+  </div>
+
+</div>
