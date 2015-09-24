@@ -9,6 +9,14 @@
 </div>
 
 <div class="row marketing" ng-repeat="location in main.locations">
-  <h4>{{location}}</h4>
-  <p>My weather data</p>
+  <a class="close" ng-click="main.removeLocation(location.zip)">&times;</a>
+  <h3>{{location.name}} ({{location.zip}})</h3>
+  <p>
+    <h4>{{location.weather.main}}</h4> {{location.weather.description}}
+  </p>
+  <p>
+    <h4>Temperatures today</h4>
+    Current {{location.temp.temp}} - Max {{location.temp.temp_max}} - Min {{location.temp.temp_min}}
+  </p>
+  <hr/>
 </div>
